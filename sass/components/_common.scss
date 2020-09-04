@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  /* outline: solid blue; */
+}
+
+body {
+  font-family: $roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+
+  color: $main-text;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.section {
+  padding: 94px 0;
+
+  &-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.166;
+    text-align: center;
+    color: $secondary-text;
+
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+}

@@ -1,0 +1,46 @@
+.services {
+  padding-top: 0;
+
+  & .section-title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.services-item {
+  margin-right: 30px;
+  position: relative;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+.services-box::after {
+  content: "";
+  position: absolute;
+
+  @include flexbox($display: inline-flex);
+  text-align: center;
+
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $background-services-box;
+
+  @extend %bold-text;
+}
+
+.services-box.box-1::after {
+  content: "Десктопные приложения";
+}
+
+.services-box.box-2::after {
+  content: "Мобильные приложения";
+}
+
+.services-box.box-3::after {
+  content: "Дизайнерские решения";
+}

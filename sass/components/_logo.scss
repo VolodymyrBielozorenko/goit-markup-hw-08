@@ -1,0 +1,17 @@
+.logo {
+  font-family: $raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  color: $additional;
+  margin-right: 85px;
+
+  & > span {
+    color: $accent;
+  }
+
+  &-footer {
+    color: $white;
+    margin-right: 0;
+  }
+}

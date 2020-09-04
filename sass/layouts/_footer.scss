@@ -1,0 +1,73 @@
+.page-footer {
+  background-color: $background-footer;
+  padding: 60px 0;
+}
+
+.footer-address,
+.footer-links {
+  width: calc((100% - 30px * 2) / 4);
+  margin-right: 30px;
+}
+
+.footer-mailing {
+  width: calc(100% / 2);
+}
+
+.company-address {
+  font-style: normal;
+}
+
+.local-address {
+  display: block;
+  color: $white;
+  margin-top: 20px;
+  margin-bottom: 9px;
+}
+
+.address-link {
+  color: $alpha-white;
+  display: block;
+
+  transition: color;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.appeal {
+  display: block;
+  margin-bottom: 20px;
+
+  @extend %bold-text;
+}
+
+.form-footer-input {
+  width: 358px;
+  padding: 15px 16px;
+  margin-right: 12px;
+  background-color: $background-footer;
+
+  color: $white;
+  font-size: 16px;
+  line-height: 1.25;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--footer-input-placeholder);
+    display: inline-block;
+    align-items: center;
+  }
+}
