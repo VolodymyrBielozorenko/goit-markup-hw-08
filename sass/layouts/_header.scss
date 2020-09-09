@@ -1,25 +1,76 @@
 .page-header {
-  padding: 24px 0 25px 0;
+  padding: 16px 0 16px 0;
   border: 1px solid $header-border;
 
-  @include flexbox($justify-content: space-between);
+  @include for-size(tablet) {
+    padding: 26px 0 26px 0;
 
-  position: relative;
-  max-width: 1600px;
-  min-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    max-width: 768px;
+    min-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include for-size(desktop) {
+    padding: 24px 0 25px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    max-width: 1200px;
+    min-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .navigation {
-  @include flexbox($justify-content: space-between);
+  @include for-size(tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &-list {
-    align-items: baseline;
+    display: none;
+
+    @include for-size(tablet) {
+      display: flex;
+      align-items: baseline;
+      margin-right: 75px;
+    }
+
+    @include for-size(desktop) {
+      display: flex;
+      align-items: baseline;
+    }
   }
 
   &-item:not(:last-child) {
     margin-right: 50px;
+  }
+}
+
+.nav-container {
+  @include for-size(tablet) {
+    display: flex;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
   }
 }
 
@@ -47,10 +98,14 @@
     width: 48px;
     height: 4px;
     bottom: -1px;
-    left: 448px;
+    left: 227px;
 
     background-color: $accent;
     border-radius: 2px;
+
+    @include for-size(desktop) {
+      left: 242px;
+    }
   }
 }
 
@@ -60,18 +115,37 @@
   .navigation-item > &::after {
     content: "";
     position: absolute;
-    width: 78px;
+    width: 75px;
     height: 4px;
     bottom: 0;
-    left: 546px;
+    left: 325px;
 
     background-color: $accent;
     border-radius: 2px;
+
+    @include for-size(desktop) {
+      left: 341px;
+    }
+  }
+}
+
+.contacts-list {
+  display: none;
+
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    display: flex;
   }
 }
 
 .contacts-item:not(:last-child) {
-  margin-right: 30px;
+  @include for-size(desktop) {
+    margin-right: 30px;
+  }
 }
 
 .navigation-contacts {
@@ -80,9 +154,13 @@
 }
 
 .icon-contacts {
-  margin-right: 10px;
+  margin-right: 8px;
   fill: $main-text;
   transition: fill;
+
+  @include for-size(desktop) {
+    margin-right: 10px;
+  }
 
   .navigation-contacts:hover &,
   .navigation-contacts:focus & {

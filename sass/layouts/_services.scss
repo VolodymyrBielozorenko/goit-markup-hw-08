@@ -1,10 +1,22 @@
 .services {
+  display: none;
+}
+
+.services {
+  @include for-size(desktop) {
+    display: block;
+  }
+
   padding-top: 0;
 
   & .section-title {
     margin-top: 0;
     margin-bottom: 50px;
   }
+}
+
+.services-list {
+  display: flex;
 }
 
 .services-item {

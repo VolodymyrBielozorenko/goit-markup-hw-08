@@ -1,5 +1,5 @@
 .social-list {
-  justify-content: center;
+  @include flexbox();
 }
 
 .social-item:not(:last-child),
@@ -28,6 +28,10 @@
     fill: $white;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+}
+
+.join-list {
+  @include flexbox();
 }
 
 .join-link {

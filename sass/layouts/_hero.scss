@@ -1,5 +1,9 @@
 .hero-box {
-  padding: 200px 0;
+  padding: 118px 0;
+
+  @include for-size(desktop) {
+    padding: 200px 0;
+  }
 
   & > .hero-title,
   & > .btn {
@@ -11,19 +15,33 @@
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
-  width: 696px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.363;
+  font-size: 26px;
+  line-height: 1.615;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $white;
+
+  @include for-size(mobile) {
+    width: 360px;
+  }
+
+  @include for-size(tablet) {
+    width: 360px;
+  }
+
+  @include for-size(desktop) {
+    font-size: 44px;
+    line-height: 1.363;
+    width: 696px;
+  }
 }
 
 .overlay {
   max-width: 1600px;
-  height: 600px;
+  // height: 600px;
+  max-height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-color: $background-hero;
