@@ -10,6 +10,13 @@
 
   transition: transform 250ms ease-in-out;
 
+  padding: 93px 15px;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 480px) {
+    padding: 0;
+  }
+
   &.is-hidden {
     visibility: hidden;
     pointer-events: none;
@@ -18,19 +25,29 @@
 }
 
 .modal-form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
 
-  min-width: 528px;
-  min-height: 581px;
-  padding: 40px 39px 40px 41px;
+  padding: 40px;
 
   background-color: $white;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 480px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
 
 .modal-close-btn {
@@ -163,8 +180,18 @@
   }
 }
 
-.agreement-conditions-link {
-  color: $accent;
+.agreement-conditions {
+  font-size: 12px;
+  line-height: 1.166;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.614;
+  }
+
+  &-link {
+    color: $accent;
+  }
 }
 
 .submit-btn {

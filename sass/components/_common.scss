@@ -1,6 +1,8 @@
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
-  outline: solid blue;
+  // outline: solid blue;
 }
 
 body {
@@ -11,6 +13,10 @@ body {
   letter-spacing: 0.03em;
 
   color: $main-text;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .container {

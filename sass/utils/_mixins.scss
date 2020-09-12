@@ -4,6 +4,8 @@
   align-items: $align-items;
 }
 
+// @include flexbox($display: inline-flex);
+
 @mixin for-size($range) {
   $mobile: 480px;
   $tablet: 768px;

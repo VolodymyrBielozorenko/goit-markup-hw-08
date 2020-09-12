@@ -11,8 +11,8 @@
   }
 
   @include for-size(desktop) {
-    display: flex;
     flex-wrap: nowrap;
+    justify-content: flex-start;
   }
 }
 
@@ -36,14 +36,26 @@
 
 .footer-container {
   text-align: center;
+
+  @include for-size(desktop) {
+    text-align: start;
+  }
 }
 
 .footer-address {
   margin-bottom: 60px;
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .footer-links {
   margin-bottom: 60px;
+
+  @include for-size(desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .company-address {
@@ -81,6 +93,12 @@
   @extend %bold-text;
 }
 
+.form-footer-label {
+  @include for-size(desktop) {
+    display: flex;
+  }
+}
+
 .form-footer-input {
   width: 100%;
   padding: 15px 16px;
@@ -98,6 +116,11 @@
 
   @include for-size(tablet) {
     width: 450px;
+  }
+
+  @include for-size(desktop) {
+    width: 358px;
+    margin-bottom: 0;
   }
 
   &::placeholder {

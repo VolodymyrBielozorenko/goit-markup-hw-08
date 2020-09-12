@@ -21,6 +21,10 @@
   margin-right: auto;
   padding: 10px 28px 10px 29px;
 
+  @include for-size(desktop) {
+    margin-left: 12px;
+  }
+
   &::after {
     content: "";
     display: block;

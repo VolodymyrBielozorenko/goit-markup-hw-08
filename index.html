@@ -18,6 +18,73 @@
         <nav class="navigation flexbox">
           <div class="nav-container flexbox">
             <a href="./index.html" class="logo link"><span>Web</span> Studio</a>
+
+            <button
+              type="button"
+              class="menu-button"
+              aria-expanded="false"
+              aria-controls="menu-container"
+              data-menu-button
+            >
+              <svg
+                width="40"
+                height="40"
+                class="menu-btn-icon"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+                <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+              </svg>
+            </button>
+
+            <div class="menu-container" id="menu-container" data-menu>
+              <ul class="menu-navigation-list list">
+                <li
+                  class="navigation-item menu-navigation-item menu-current-item"
+                >
+                  <a
+                    href="./index.html"
+                    class="navigation-link link studio menu-studio"
+                    >Студия</a
+                  >
+                </li>
+                <li class="navigation-item menu-navigation-item">
+                  <a href="./portfolio.html" class="navigation-link link"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="navigation-item menu-navigation-item">
+                  <a href="" class="navigation-link link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="menu-contacts-list list">
+                <li class="contacts-item menu-contacts-item">
+                  <a
+                    href="mailto:info@devstudio.com"
+                    class="navigation-link navigation-contacts link"
+                  >
+                    <svg class="icon-contacts" width="16" height="12">
+                      <use href="./images/sprite.svg#icon-envelope"></use>
+                    </svg>
+
+                    info@devstudio.com
+                  </a>
+                </li>
+                <li class="contacts-item menu-contacts-item">
+                  <a
+                    href="tel:+380961111111"
+                    class="navigation-link navigation-contacts link"
+                  >
+                    <svg class="icon-contacts" width="10px" height="16px">
+                      <use href="./images/sprite.svg#icon-smartphone"></use>
+                    </svg>
+
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </div>
+
             <ul class="navigation-list list flexbox">
               <li class="navigation-item">
                 <a href="./index.html" class="navigation-link link studio"
@@ -203,35 +270,62 @@
           <ul class="services-list list flexbox">
             <li class="services-item">
               <div class="services-box box-1">
-                <img
-                  src="./images/nout-new.jpg"
-                  width="370"
-                  height="294"
-                  alt="Планшет на столе, пальцы на клавиатуре"
-                  class="services-img img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/main-desktop/services-notebook.jpg    1x,
+                      ./images/main-desktop/services-notebook@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/main-desktop/services-notebook.jpg"
+                    width="370"
+                    height="294"
+                    alt="Планшет на столе, пальцы на клавиатуре"
+                    class="services-img img"
+                  />
+                </picture>
               </div>
             </li>
             <li class="services-item">
               <div class="services-box box-2">
-                <img
-                  src="./images/smart-new.jpg"
-                  width="370"
-                  height="294"
-                  alt="Смартфон в руке, открытый ноутбук"
-                  class="services-img img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/main-desktop/services-smartphone.jpg    1x,
+                      ./images/main-desktop/services-smartphone@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/main-desktop/services-smartphone.jpg"
+                    width="370"
+                    height="294"
+                    alt="Смартфон в руке, открытый ноутбук"
+                    class="services-img img"
+                  />
+                </picture>
               </div>
             </li>
             <li class="services-item">
               <div class="services-box box-3">
-                <img
-                  src="./images/desc-new.jpg"
-                  width="370"
-                  height="294"
-                  alt="Планшет в руке"
-                  class="services-img img"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/main-desktop/services-desktop.jpg    1x,
+                      ./images/main-desktop/services-desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/main-desktop/services-desktop.jpg"
+                    width="370"
+                    height="294"
+                    alt="Планшет в руке"
+                    class="services-img img"
+                  />
+                </picture>
               </div>
             </li>
           </ul>
@@ -244,13 +338,36 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list flexbox">
             <li class="team-item">
-              <img
-                src="./images/photo-1-new.jpg"
-                width="270"
-                height="260"
-                alt="Фото члена команды"
-                class="team-img img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-desktop/team-photo-1.jpg    1x,
+                    ./images/main-desktop/team-photo-1@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-tablet/team-photo-1.jpg    1x,
+                    ./images/main-tablet/team-photo-1@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-mobile/team-photo-1.jpg    1x,
+                    ./images/main-mobile/team-photo-1@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/main-desktop/team-photo-1.jpg"
+                  width="100%"
+                  height="auto"
+                  alt="Фото члена команды"
+                  class="team-img img"
+                />
+              </picture>
               <h3 class="team-name">Игорь Демьяненко</h3>
               <p class="team-position">Product Designer</p>
               <ul class="social-list list flexbox">
@@ -308,13 +425,36 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/photo-2-new.jpg"
-                width="270"
-                height="260"
-                alt="Фото члена команды"
-                class="team-img img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-desktop/team-photo-2.jpg    1x,
+                    ./images/main-desktop/team-photo-2@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-tablet/team-photo-2.jpg    1x,
+                    ./images/main-tablet/team-photo-2@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-mobile/team-photo-2.jpg    1x,
+                    ./images/main-mobile/team-photo-2@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/main-desktop/team-photo-2.jpg"
+                  width="100%"
+                  height="auto"
+                  alt="Фото члена команды"
+                  class="team-img img"
+                />
+              </picture>
               <h3 class="team-name">Ольга Репина</h3>
               <p class="team-position">Frontend Developer</p>
               <ul class="social-list list flexbox">
@@ -372,13 +512,36 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/photo-3-new.jpg"
-                width="270"
-                height="260"
-                alt="Фото члена команды"
-                class="team-img img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-desktop/team-photo-3.jpg    1x,
+                    ./images/main-desktop/team-photo-3@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-tablet/team-photo-3.jpg    1x,
+                    ./images/main-tablet/team-photo-3@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-mobile/team-photo-3.jpg    1x,
+                    ./images/main-mobile/team-photo-3@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/main-desktop/team-photo-3.jpg"
+                  width="100%"
+                  height="auto"
+                  alt="Фото члена команды"
+                  class="team-img img"
+                />
+              </picture>
               <h3 class="team-name">Николай Тарасов</h3>
               <p class="team-position">Marketing</p>
               <ul class="social-list list flexbox">
@@ -436,13 +599,36 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/photo-4-new.jpg"
-                width="270"
-                height="260"
-                alt="Фото члена команды"
-                class="team-img img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/main-desktop/team-photo-4.jpg    1x,
+                    ./images/main-desktop/team-photo-4@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-tablet/team-photo-4.jpg    1x,
+                    ./images/main-tablet/team-photo-4@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/main-mobile/team-photo-4.jpg    1x,
+                    ./images/main-mobile/team-photo-4@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/main-desktop/team-photo-4.jpg"
+                  width="100%"
+                  height="auto"
+                  alt="Фото члена команды"
+                  class="team-img img"
+                />
+              </picture>
               <h3 class="team-name">Михаил Ермаков</h3>
               <p class="team-position">UI Designer</p>
               <ul class="social-list list flexbox">
@@ -689,5 +875,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
